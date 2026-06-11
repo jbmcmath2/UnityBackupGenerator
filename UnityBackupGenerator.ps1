@@ -19,6 +19,6 @@ if(Test-Path $destFolder\$sourceName-$todaysDate-back-up){
 else{
     New-Item -ItemType Directory -Path $destFolder -Name $sourceName-$todaysDate-back-up
     robocopy $sourceFolder $destFolder\$sourceName-$todaysDate-back-up /MIR /mt /e /z /log+:$destFolder\$sourceName-$todaysDate-back-up\$todaysdate.txt /XD "Library" "Temp" "Logs" ".vs" ".vscode"
-    Write-Output "Mirror Complete"
+    Write-Output "Copy Complete"
 }
 Write-Host "Unity Back-up Script Complete" -ForegroundColor Green
